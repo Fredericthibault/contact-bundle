@@ -1,0 +1,44 @@
+Viweb\ContactBundle\Entity\Address:
+    type: entity
+    table: null
+    repositoryClass: Viweb\ContactBundle\Repository\AddressRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        civic:
+            type: string
+            length: 255
+        street:
+            type: string
+            length: '500'
+        city:
+            type: string
+            length: 255
+        province:
+            type: string
+            length: '35'
+        country:
+            type: string
+            length: '116'
+        lat:
+            type: float
+            nullable: true
+        lng:
+            type: float
+            nullable: true
+        title:
+            type: string
+            length: 255
+            nullable: true
+    manyToOne:
+        container:
+            targetEntity: Viweb\ContactBundle\Entity\ContactContainerTranslation
+            inversedBy: addresses
+            joinColumn:
+                name: container_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,29 @@
+Viweb\ContactBundle\Entity\Phone:
+    type: entity
+    table: null
+    repositoryClass: Viweb\ContactBundle\Repository\PhoneRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        num:
+            type: string
+            length: '25'
+        ext:
+            type: string
+            length: '25'
+            nullable: true
+    manyToOne:
+        container:
+            targetEntity: Viweb\ContactBundle\Entity\ContactContainerTranslation
+            inversedBy: phones
+            joinColumn:
+                name: container_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,3 @@
+viweb_contact_homepage:
+    path:     /
+    defaults: { _controller: ViwebContactBundle:Default:index }

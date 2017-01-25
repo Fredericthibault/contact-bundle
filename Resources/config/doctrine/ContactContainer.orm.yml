@@ -1,0 +1,11 @@
+Viweb\ContactBundle\Entity\ContactContainer:
+    type: entity
+    table: null
+    repositoryClass: Viweb\ContactBundle\Repository\ContactContainerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

@@ -1,0 +1,26 @@
+Viweb\ContactBundle\Entity\ContactContainerTranslation:
+    type: entity
+    table: null
+    repositoryClass: Viweb\ContactBundle\Repository\ContactContainerTranslationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        mainText:
+            type: text
+            nullable: true
+            column: main_text
+    oneToMany:
+        addresses:
+            targetEntity: Viweb\ContactBundle\Entity\Address
+            mappedBy: container
+        phones:
+            targetEntity: Viweb\ContactBundle\Entity\Phone
+            mappedBy: container
+        mails:
+            targetEntity: Viweb\ContactBundle\Entity\Mail
+            mappedBy: container
+    lifecycleCallbacks: {  }

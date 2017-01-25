@@ -1,0 +1,25 @@
+Viweb\ContactBundle\Entity\Mail:
+    type: entity
+    table: null
+    repositoryClass: Viweb\ContactBundle\Repository\MailRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        mail:
+            type: string
+            length: 255
+    manyToOne:
+        container:
+            targetEntity: Viweb\ContactBundle\Entity\ContactContainerTranslation
+            inversedBy: mails
+            joinColumn:
+                name: container_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

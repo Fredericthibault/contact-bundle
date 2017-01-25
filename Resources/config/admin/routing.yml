@@ -1,0 +1,13 @@
+viweb_contact:
+    resource: |
+        alias: viweb.contact
+        redirect: update
+        except: ['show']
+        section: admin
+        templates: ViwebSystemBundle:Crud
+        vars:
+            all:
+                subheader: app.ui.supplier
+            index:
+                icon: 'outline'
+    type: sylius.resource

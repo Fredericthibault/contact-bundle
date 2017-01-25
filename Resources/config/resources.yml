@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        viweb.contact:
+            classes:
+                model: Viweb\ContactBundle\Entity\ContactContainer
+                repository: Viweb\ContactBundle\Repository\ContactContainerRepository
+                form: Viweb\ContactBundle\Form\Type\ContactContainerType
+            translation:
+                classes:
+                    model: Viweb\ContactBundle\Entity\ContactContainerTranslation
+                    form: Viweb\ContactBundle\Form\Type\ContactContainerTranslationType
