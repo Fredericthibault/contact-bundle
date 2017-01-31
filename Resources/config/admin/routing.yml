@@ -1,8 +1,8 @@
-viweb_contact:
+viweb_admin_contact:
     resource: |
         alias: viweb.contact
         redirect: update
-        except: ['show']
+        except: ['show', 'update']
         section: admin
         templates: ViwebSystemBundle:Crud
         vars:
@@ -11,3 +11,12 @@ viweb_contact:
             index:
                 icon: 'outline'
     type: sylius.resource
+
+viweb_admin_contact_update:
+    path: /contacts/{id}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: viweb.controller.contact:updateAction
+        _sylius:
+            section: admin
+            template: ViwebSystemBundle:Crud:update.html.twig
