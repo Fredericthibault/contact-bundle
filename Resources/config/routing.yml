@@ -1,3 +1,8 @@
 viweb_contact_homepage:
     path:     /
     defaults: { _controller: ViwebContactBundle:Default:index }
+
+viweb_contact_simple:
+    path: /simple_send
+    defaults: { _controller: ViwebContactBundle:SimpleContact:sendSimpleForm }
+    methods: [POST]
