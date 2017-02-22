@@ -15,8 +15,8 @@ class ConfigureAdminMenuListener
 {
     public function onMenuConfigure(ConfigureAdminMenuEvent $event)
     {
-        $menu = $event->getMenu();
-        $menu->addChild('Contact', ['route' => 'viweb_admin_contact_index']);
+//        $menu = $event->getMenu();
+//        $menu->addChild('Contact', ['route' => 'viweb_admin_contact_index']);
 
     }
 
